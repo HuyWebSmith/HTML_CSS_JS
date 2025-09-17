@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3bb0c586e2c246c1a0639699b99f66ae" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLyUserModel.DON_DAT_HANG" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyUserModel.DONDATHANG_MATHANG" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyUserModel.HOA_DON" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyUserModel.HOADON_MATHANG" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyUserModel.LOAI_MAT_HANG" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyUserModel.MAT_HANG" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyUserModel.NHA_CUNG_CAP" Width="1.5" PointX="0.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyUserModel.NHAN_VIEN" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyUserModel.sysdiagram" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyUserModel.FK__DON_DAT_H__MANCC__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyUserModel.FK__DON_DAT_HA__MANV__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyUserModel.FK__DONDATHAN__MADDH__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyUserModel.FK__DONDATHANG__MAMH__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyUserModel.FK__HOA_DON__MANHANV__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyUserModel.FK__HOADON_MAT__MAHD__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyUserModel.FK__HOADON_MAT__MAMH__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyUserModel.FK__MAT_HANG__MALOAI__3F466844" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

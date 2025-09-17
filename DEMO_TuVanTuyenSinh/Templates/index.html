@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tư Vấn Tuyển Sinh</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body>
+    <h1>Tư Vấn Tuyển Sinh</h1>
+
+    <!-- Form tư vấn -->
+    <form id="advisoryForm">
+        <label for="score">Điểm số:</label>
+        <select id="score" name="score" required>
+            <option value="10">10</option>
+            <option value="9">9</option>
+            <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select><br>
+
+        <label for="interests">Sở thích (Cách nhau bằng dấu phẩy):</label>
+        <input type="text" id="interests" name="interests" required><br>
+
+        <label for="location">Vị trí trường:</label>
+        <select id="location" name="location" required>
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="Hồ Chí Minh">TPHCM</option>
+        </select><br>
+
+        <label for="personality">Tính cách (Cách nhau bằng dấu phẩy):</label>
+        <input type="text" id="personality" name="personality" required><br>
+
+        <label for="income">Thu nhập gia đình:</label>
+        <select id="income" name="income" required>
+            <option value="1 triệu">1 triệu</option>
+            <option value="2 triệu">2 triệu</option>
+            <option value="3 triệu">3 triệu</option>
+            <option value="5 triệu">5 triệu</option>
+            <option value="10 triệu">10 triệu</option>
+        </select><br>
+
+        <button type="submit">Tư Vấn</button>
+    </form>
+
+    <!-- Bảng kết quả tư vấn -->
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Tên trường</th>
+                <th>Trọng số </th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Các kết quả sẽ được thêm vào đây -->
+        </tbody>
+    </table>
+
+    
+</body>
+</html>

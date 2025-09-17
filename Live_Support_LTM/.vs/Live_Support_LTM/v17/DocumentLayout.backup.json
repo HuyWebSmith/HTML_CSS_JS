@@ -1,0 +1,365 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\areas\\supporter\\views\\chat\\chatroom.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:areas\\supporter\\views\\chat\\chatroom.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\live_support_ltm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:live_support_ltm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\areas\\customer\\views\\chat\\chatroom.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:areas\\customer\\views\\chat\\chatroom.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\areas\\customer\\views\\chat\\createticket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:areas\\customer\\views\\chat\\createticket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\areas\\customer\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:areas\\customer\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\controllers\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:controllers\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\areas\\supporter\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:areas\\supporter\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\areas\\supporter\\views\\chat\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:areas\\supporter\\views\\chat\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072541_test9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250805072541_test9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\models\\supportcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:models\\supportcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072400_test8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250805072400_test8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072252_test7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250805072252_test7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072216_test6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250805072216_test6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\migrations\\20250805070421_test5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:migrations\\20250805070421_test5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\models\\chatroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:models\\chatroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|c:\\users\\nquan\\onedrive\\m\u00E1y t\u00EDnh\\workspaces\\live_support_ltm\\migrations\\20250805065208_test4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEA8FD4-FF0B-4544-9C7F-612F508154CC}|Live_Support_LTM.csproj|solutionrelative:migrations\\20250805065208_test4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 416,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Live_Support_LTM",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Live_Support_LTM.csproj",
+              "RelativeDocumentMoniker": "Live_Support_LTM.csproj",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Live_Support_LTM.csproj",
+              "RelativeToolTip": "Live_Support_LTM.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-05T08:03:10.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T08:00:35.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatRoom.cshtml",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Supporter\\Views\\Chat\\ChatRoom.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Supporter\\Views\\Chat\\ChatRoom.cshtml",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Supporter\\Views\\Chat\\ChatRoom.cshtml*",
+              "RelativeToolTip": "Areas\\Supporter\\Views\\Chat\\ChatRoom.cshtml*",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAawA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T07:41:53.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20250805072541_test9.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072541_test9.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250805072541_test9.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072541_test9.cs",
+              "RelativeToolTip": "Migrations\\20250805072541_test9.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T07:25:42.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SupportContext.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Models\\SupportContext.cs",
+              "RelativeDocumentMoniker": "Models\\SupportContext.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Models\\SupportContext.cs",
+              "RelativeToolTip": "Models\\SupportContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T07:24:23.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20250805072400_test8.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072400_test8.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250805072400_test8.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072400_test8.cs",
+              "RelativeToolTip": "Migrations\\20250805072400_test8.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T07:24:00.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T07:23:20.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20250805072252_test7.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072252_test7.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250805072252_test7.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072252_test7.cs",
+              "RelativeToolTip": "Migrations\\20250805072252_test7.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T07:22:53.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20250805072216_test6.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072216_test6.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250805072216_test6.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805072216_test6.cs",
+              "RelativeToolTip": "Migrations\\20250805072216_test6.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T07:22:16.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20250805070421_test5.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805070421_test5.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250805070421_test5.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805070421_test5.cs",
+              "RelativeToolTip": "Migrations\\20250805070421_test5.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T07:04:21.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20250805065208_test4.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805065208_test4.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250805065208_test4.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Migrations\\20250805065208_test4.cs",
+              "RelativeToolTip": "Migrations\\20250805065208_test4.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:52:09.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Models\\Message.cs",
+              "RelativeDocumentMoniker": "Models\\Message.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Models\\Message.cs",
+              "RelativeToolTip": "Models\\Message.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:50:25.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ChatRoom.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Models\\ChatRoom.cs",
+              "RelativeDocumentMoniker": "Models\\ChatRoom.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Models\\ChatRoom.cs",
+              "RelativeToolTip": "Models\\ChatRoom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:48:42.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "Models\\Ticket.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Models\\Ticket.cs",
+              "RelativeToolTip": "Models\\Ticket.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAowBcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:48:31.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChatRoom.cshtml",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Customer\\Views\\Chat\\ChatRoom.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Customer\\Views\\Chat\\ChatRoom.cshtml",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Customer\\Views\\Chat\\ChatRoom.cshtml",
+              "RelativeToolTip": "Areas\\Customer\\Views\\Chat\\ChatRoom.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T06:44:57.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Controllers\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "Controllers\\Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Controllers\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "Controllers\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAIA7wBYAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:43:45.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Supporter\\Views\\Chat\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Supporter\\Views\\Chat\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Supporter\\Views\\Chat\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Supporter\\Views\\Chat\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T06:42:33.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateTicket.cshtml",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Customer\\Views\\Chat\\CreateTicket.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Customer\\Views\\Chat\\CreateTicket.cshtml",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Customer\\Views\\Chat\\CreateTicket.cshtml",
+              "RelativeToolTip": "Areas\\Customer\\Views\\Chat\\CreateTicket.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T06:41:55.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Supporter\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "Areas\\Supporter\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Supporter\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "Areas\\Supporter\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAowB8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:41:17.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Customer\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "Areas\\Customer\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\nquan\\OneDrive\\M\u00E1y t\u00EDnh\\WorkSpaces\\Live_Support_LTM\\Areas\\Customer\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "Areas\\Customer\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAASwDcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:41:00.757Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

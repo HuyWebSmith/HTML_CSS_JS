@@ -1,0 +1,33 @@
+@page "{id:int}"
+@model Live_Support_LTM.Pages.Customer.ChatRoomModel
+@{
+    ViewData["Title"] = "Chat Room";
+}
+<div>
+    <h2>Chat Room: @Model.RoomCode</h2>
+    <div id="messagesList"></div>
+    <input type="text" id="messageInput" />
+    <button id="sendButton">Send</button>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/chatHub")
+        .build();
+
+    connection.on("ReceiveMessage", (user, message) => {
+        const msg = document.createElement("div");
+        msg.textContent = `${user}: ${message}`;
+        document.getElementById("messagesList").appendChild(msg);
+    });
+
+    connection.start().then(() => {
+        connection.invoke("JoinRoom", "@Model.RoomCode");
+    });
+
+    document.getElementById("sendButton").addEventListener("click", () => {
+        const message = document.getElementById("messageInput").value;
+        connection.invoke("SendMessage", "@Model.RoomCode", "@Model.UserName", message);
+        document.getElementById("messageInput").value = "";
+    });
+</script>

@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Hỗ trợ khách hàng";
+}
+
+<h2>Danh sách cuộc trò chuyện</h2>
+
+<div>
+    <ul id="ticket-list">
+        @foreach (var ticket in ViewBag.Tickets)
+        {
+            <li>
+                <a href="/Supporter/Chat/ChatRoom?ticketId=@ticket.Id">
+                    Phòng: @ticket.RoomId - Trạng thái: @ticket.Status
+                </a>
+            </li>
+        }
+    </ul>
+</div>

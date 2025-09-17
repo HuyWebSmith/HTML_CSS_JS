@@ -1,0 +1,139 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+<style>
+        .register-page {
+            background: linear-gradient(to right, #f8f9fa, #dfe9f3);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .register-container {
+            max-width: 1000px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .register-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .register-form-section,
+        .register-external-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .register-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+        }
+
+        .register-subtitle {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        </style>
+<div class="register-page">
+    <div class="register-container">
+        <h1 class="register-title">@ViewData["Title"]</h1>
+
+        <div class="register-content">
+            <div class="register-form-section">
+                <section class="register-card">
+                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                        <h2 class="register-subtitle">Create a new account</h2>
+                        <hr />
+                        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.FullName" class="form-control" autocomplete="name" aria-required="true" placeholder="Full Name" />
+                            <label asp-for="Input.FullName">Full Name</label>
+                            <span asp-validation-for="Input.FullName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Email" />
+                            <label asp-for="Input.Email">Email</label>
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Password" />
+                            <label asp-for="Input.Password">Password</label>
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Confirm Password" />
+                            <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select asp-for="Input.Role" class="form-control">
+                                <option disabled selected>-Select Role-</option>
+                                @foreach (var role in Model.Input.RoleList)
+                                {
+                                    <option value="@role.Value">@role.Text</option>
+                                }
+                            </select>
+                            <label for="Input_Role">Role</label>
+                        </div>
+
+
+                        <button id="registerSubmit" type="submit" class="btn btn-primary w-100">Register</button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="register-external-section">
+                <section class="register-card">
+                    <h3 class="register-subtitle">Use another service to register</h3>
+                    <hr />
+                    @if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                    {
+                        <p>
+                            No external authentication services configured. 
+                            <a href="https://go.microsoft.com/fwlink/?LinkID=532715" target="_blank">Learn how to set them up</a>.
+                        </p>
+                    }
+                    else
+                    {
+                        <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                            <div class="d-grid gap-2">
+                                @foreach (var provider in Model.ExternalLogins!)
+                                {
+                                    <button type="submit" class="btn btn-outline-secondary" name="provider" value="@provider.Name">
+                                        <i class="bi bi-box-arrow-in-right me-2"></i> Register with @provider.DisplayName
+                                    </button>
+                                }
+                            </div>
+                        </form>
+                    }
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+

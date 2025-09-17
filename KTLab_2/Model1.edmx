@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QuanLyUserModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DON_DAT_HANG">
+          <Key>
+            <PropertyRef Name="MADDH" />
+          </Key>
+          <Property Name="MADDH" Type="int" Nullable="false" />
+          <Property Name="MANCC" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="NGAYDAT" Type="datetime" Nullable="false" />
+          <Property Name="MANV" Type="varchar" MaxLength="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DONDATHANG_MATHANG">
+          <Key>
+            <PropertyRef Name="MADDH" />
+            <PropertyRef Name="MAMH" />
+          </Key>
+          <Property Name="MADDH" Type="int" Nullable="false" />
+          <Property Name="MAMH" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="SOLUONG" Type="int" Nullable="false" />
+          <Property Name="DONGIA" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOA_DON">
+          <Key>
+            <PropertyRef Name="MAHOADON" />
+          </Key>
+          <Property Name="MAHOADON" Type="int" Nullable="false" />
+          <Property Name="NGAYLAP" Type="datetime" Nullable="false" />
+          <Property Name="MANHANVIEN" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="MAKH" Type="int" />
+        </EntityType>
+        <EntityType Name="HOADON_MATHANG">
+          <Key>
+            <PropertyRef Name="MAHD" />
+            <PropertyRef Name="MAMH" />
+          </Key>
+          <Property Name="MAHD" Type="int" Nullable="false" />
+          <Property Name="MAMH" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="SOLUONGMUA" Type="int" Nullable="false" />
+          <Property Name="THANHTIEN" Type="float" />
+        </EntityType>
+        <EntityType Name="LOAI_MAT_HANG">
+          <Key>
+            <PropertyRef Name="MALOAI" />
+          </Key>
+          <Property Name="MALOAI" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="TENLOAI" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MAT_HANG">
+          <Key>
+            <PropertyRef Name="MAMH" />
+          </Key>
+          <Property Name="MAMH" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="TENMH" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="GIABAN" Type="bigint" Nullable="false" />
+          <Property Name="DVT" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="MALOAI" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="MOTA" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="VOHIEUHOA" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NHA_CUNG_CAP">
+          <Key>
+            <PropertyRef Name="MANCC" />
+          </Key>
+          <Property Name="MANCC" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="TENNCC" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DIACHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SDT" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="VOHIEUHOA" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NHAN_VIEN">
+          <Key>
+            <PropertyRef Name="MANHANVIEN" />
+          </Key>
+          <Property Name="MANHANVIEN" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="TENNHANVIEN" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="DIACHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SDT" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="GIOITINH" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="NGAYSINH" Type="datetime" Nullable="false" />
+          <Property Name="CMND_CCCD" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="TENDANGNHAP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MATKHAU" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="VOHIEUHOA" Type="bit" Nullable="false" />
+          <Property Name="LAQUANLY" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK__DON_DAT_H__MANCC__48CFD27E">
+          <End Role="NHA_CUNG_CAP" Type="Self.NHA_CUNG_CAP" Multiplicity="1" />
+          <End Role="DON_DAT_HANG" Type="Self.DON_DAT_HANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHA_CUNG_CAP">
+              <PropertyRef Name="MANCC" />
+            </Principal>
+            <Dependent Role="DON_DAT_HANG">
+              <PropertyRef Name="MANCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DON_DAT_HA__MANV__49C3F6B7">
+          <End Role="NHAN_VIEN" Type="Self.NHAN_VIEN" Multiplicity="1" />
+          <End Role="DON_DAT_HANG" Type="Self.DON_DAT_HANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHAN_VIEN">
+              <PropertyRef Name="MANHANVIEN" />
+            </Principal>
+            <Dependent Role="DON_DAT_HANG">
+              <PropertyRef Name="MANV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DONDATHAN__MADDH__4CA06362">
+          <End Role="DON_DAT_HANG" Type="Self.DON_DAT_HANG" Multiplicity="1" />
+          <End Role="DONDATHANG_MATHANG" Type="Self.DONDATHANG_MATHANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DON_DAT_HANG">
+              <PropertyRef Name="MADDH" />
+            </Principal>
+            <Dependent Role="DONDATHANG_MATHANG">
+              <PropertyRef Name="MADDH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DONDATHANG__MAMH__4D94879B">
+          <End Role="MAT_HANG" Type="Self.MAT_HANG" Multiplicity="1" />
+          <End Role="DONDATHANG_MATHANG" Type="Self.DONDATHANG_MATHANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_HANG">
+              <PropertyRef Name="MAMH" />
+            </Principal>
+            <Dependent Role="DONDATHANG_MATHANG">
+              <PropertyRef Name="MAMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HOA_DON__MANHANV__4222D4EF">
+          <End Role="NHAN_VIEN" Type="Self.NHAN_VIEN" Multiplicity="1" />
+          <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHAN_VIEN">
+              <PropertyRef Name="MANHANVIEN" />
+            </Principal>
+            <Dependent Role="HOA_DON">
+              <PropertyRef Name="MANHANVIEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HOADON_MAT__MAHD__44FF419A">
+          <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="1" />
+          <End Role="HOADON_MATHANG" Type="Self.HOADON_MATHANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HOA_DON">
+              <PropertyRef Name="MAHOADON" />
+            </Principal>
+            <Dependent Role="HOADON_MATHANG">
+              <PropertyRef Name="MAHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HOADON_MAT__MAMH__45F365D3">
+          <End Role="MAT_HANG" Type="Self.MAT_HANG" Multiplicity="1" />
+          <End Role="HOADON_MATHANG" Type="Self.HOADON_MATHANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_HANG">
+              <PropertyRef Name="MAMH" />
+            </Principal>
+            <Dependent Role="HOADON_MATHANG">
+              <PropertyRef Name="MAMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MAT_HANG__MALOAI__3F466844">
+          <End Role="LOAI_MAT_HANG" Type="Self.LOAI_MAT_HANG" Multiplicity="1" />
+          <End Role="MAT_HANG" Type="Self.MAT_HANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOAI_MAT_HANG">
+              <PropertyRef Name="MALOAI" />
+            </Principal>
+            <Dependent Role="MAT_HANG">
+              <PropertyRef Name="MALOAI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuanLyUserModelStoreContainer">
+          <EntitySet Name="DON_DAT_HANG" EntityType="Self.DON_DAT_HANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DONDATHANG_MATHANG" EntityType="Self.DONDATHANG_MATHANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOA_DON" EntityType="Self.HOA_DON" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOADON_MATHANG" EntityType="Self.HOADON_MATHANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOAI_MAT_HANG" EntityType="Self.LOAI_MAT_HANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MAT_HANG" EntityType="Self.MAT_HANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NHA_CUNG_CAP" EntityType="Self.NHA_CUNG_CAP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NHAN_VIEN" EntityType="Self.NHAN_VIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__DON_DAT_H__MANCC__48CFD27E" Association="Self.FK__DON_DAT_H__MANCC__48CFD27E">
+            <End Role="NHA_CUNG_CAP" EntitySet="NHA_CUNG_CAP" />
+            <End Role="DON_DAT_HANG" EntitySet="DON_DAT_HANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DON_DAT_HA__MANV__49C3F6B7" Association="Self.FK__DON_DAT_HA__MANV__49C3F6B7">
+            <End Role="NHAN_VIEN" EntitySet="NHAN_VIEN" />
+            <End Role="DON_DAT_HANG" EntitySet="DON_DAT_HANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DONDATHAN__MADDH__4CA06362" Association="Self.FK__DONDATHAN__MADDH__4CA06362">
+            <End Role="DON_DAT_HANG" EntitySet="DON_DAT_HANG" />
+            <End Role="DONDATHANG_MATHANG" EntitySet="DONDATHANG_MATHANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DONDATHANG__MAMH__4D94879B" Association="Self.FK__DONDATHANG__MAMH__4D94879B">
+            <End Role="MAT_HANG" EntitySet="MAT_HANG" />
+            <End Role="DONDATHANG_MATHANG" EntitySet="DONDATHANG_MATHANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HOA_DON__MANHANV__4222D4EF" Association="Self.FK__HOA_DON__MANHANV__4222D4EF">
+            <End Role="NHAN_VIEN" EntitySet="NHAN_VIEN" />
+            <End Role="HOA_DON" EntitySet="HOA_DON" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HOADON_MAT__MAHD__44FF419A" Association="Self.FK__HOADON_MAT__MAHD__44FF419A">
+            <End Role="HOA_DON" EntitySet="HOA_DON" />
+            <End Role="HOADON_MATHANG" EntitySet="HOADON_MATHANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HOADON_MAT__MAMH__45F365D3" Association="Self.FK__HOADON_MAT__MAMH__45F365D3">
+            <End Role="MAT_HANG" EntitySet="MAT_HANG" />
+            <End Role="HOADON_MATHANG" EntitySet="HOADON_MATHANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MAT_HANG__MALOAI__3F466844" Association="Self.FK__MAT_HANG__MALOAI__3F466844">
+            <End Role="LOAI_MAT_HANG" EntitySet="LOAI_MAT_HANG" />
+            <End Role="MAT_HANG" EntitySet="MAT_HANG" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuanLyUserModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DON_DAT_HANG">
+          <Key>
+            <PropertyRef Name="MADDH" />
+          </Key>
+          <Property Name="MADDH" Type="Int32" Nullable="false" />
+          <Property Name="MANCC" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NGAYDAT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MANV" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="NHA_CUNG_CAP" Relationship="Self.FK__DON_DAT_H__MANCC__48CFD27E" FromRole="DON_DAT_HANG" ToRole="NHA_CUNG_CAP" />
+          <NavigationProperty Name="NHAN_VIEN" Relationship="Self.FK__DON_DAT_HA__MANV__49C3F6B7" FromRole="DON_DAT_HANG" ToRole="NHAN_VIEN" />
+          <NavigationProperty Name="DONDATHANG_MATHANG" Relationship="Self.FK__DONDATHAN__MADDH__4CA06362" FromRole="DON_DAT_HANG" ToRole="DONDATHANG_MATHANG" />
+        </EntityType>
+        <EntityType Name="DONDATHANG_MATHANG">
+          <Key>
+            <PropertyRef Name="MADDH" />
+            <PropertyRef Name="MAMH" />
+          </Key>
+          <Property Name="MADDH" Type="Int32" Nullable="false" />
+          <Property Name="MAMH" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SOLUONG" Type="Int32" Nullable="false" />
+          <Property Name="DONGIA" Type="Double" Nullable="false" />
+          <NavigationProperty Name="DON_DAT_HANG" Relationship="Self.FK__DONDATHAN__MADDH__4CA06362" FromRole="DONDATHANG_MATHANG" ToRole="DON_DAT_HANG" />
+          <NavigationProperty Name="MAT_HANG" Relationship="Self.FK__DONDATHANG__MAMH__4D94879B" FromRole="DONDATHANG_MATHANG" ToRole="MAT_HANG" />
+        </EntityType>
+        <EntityType Name="HOA_DON">
+          <Key>
+            <PropertyRef Name="MAHOADON" />
+          </Key>
+          <Property Name="MAHOADON" Type="Int32" Nullable="false" />
+          <Property Name="NGAYLAP" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MANHANVIEN" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MAKH" Type="Int32" />
+          <NavigationProperty Name="NHAN_VIEN" Relationship="Self.FK__HOA_DON__MANHANV__4222D4EF" FromRole="HOA_DON" ToRole="NHAN_VIEN" />
+          <NavigationProperty Name="HOADON_MATHANG" Relationship="Self.FK__HOADON_MAT__MAHD__44FF419A" FromRole="HOA_DON" ToRole="HOADON_MATHANG" />
+        </EntityType>
+        <EntityType Name="HOADON_MATHANG">
+          <Key>
+            <PropertyRef Name="MAHD" />
+            <PropertyRef Name="MAMH" />
+          </Key>
+          <Property Name="MAHD" Type="Int32" Nullable="false" />
+          <Property Name="MAMH" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SOLUONGMUA" Type="Int32" Nullable="false" />
+          <Property Name="THANHTIEN" Type="Double" />
+          <NavigationProperty Name="HOA_DON" Relationship="Self.FK__HOADON_MAT__MAHD__44FF419A" FromRole="HOADON_MATHANG" ToRole="HOA_DON" />
+          <NavigationProperty Name="MAT_HANG" Relationship="Self.FK__HOADON_MAT__MAMH__45F365D3" FromRole="HOADON_MATHANG" ToRole="MAT_HANG" />
+        </EntityType>
+        <EntityType Name="LOAI_MAT_HANG">
+          <Key>
+            <PropertyRef Name="MALOAI" />
+          </Key>
+          <Property Name="MALOAI" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TENLOAI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="MAT_HANG" Relationship="Self.FK__MAT_HANG__MALOAI__3F466844" FromRole="LOAI_MAT_HANG" ToRole="MAT_HANG" />
+        </EntityType>
+        <EntityType Name="MAT_HANG">
+          <Key>
+            <PropertyRef Name="MAMH" />
+          </Key>
+          <Property Name="MAMH" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TENMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GIABAN" Type="Int64" Nullable="false" />
+          <Property Name="DVT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MALOAI" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MOTA" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VOHIEUHOA" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="DONDATHANG_MATHANG" Relationship="Self.FK__DONDATHANG__MAMH__4D94879B" FromRole="MAT_HANG" ToRole="DONDATHANG_MATHANG" />
+          <NavigationProperty Name="HOADON_MATHANG" Relationship="Self.FK__HOADON_MAT__MAMH__45F365D3" FromRole="MAT_HANG" ToRole="HOADON_MATHANG" />
+          <NavigationProperty Name="LOAI_MAT_HANG" Relationship="Self.FK__MAT_HANG__MALOAI__3F466844" FromRole="MAT_HANG" ToRole="LOAI_MAT_HANG" />
+        </EntityType>
+        <EntityType Name="NHA_CUNG_CAP">
+          <Key>
+            <PropertyRef Name="MANCC" />
+          </Key>
+          <Property Name="MANCC" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TENNCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VOHIEUHOA" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="DON_DAT_HANG" Relationship="Self.FK__DON_DAT_H__MANCC__48CFD27E" FromRole="NHA_CUNG_CAP" ToRole="DON_DAT_HANG" />
+        </EntityType>
+        <EntityType Name="NHAN_VIEN">
+          <Key>
+            <PropertyRef Name="MANHANVIEN" />
+          </Key>
+          <Property Name="MANHANVIEN" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TENNHANVIEN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GIOITINH" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NGAYSINH" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CMND_CCCD" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TENDANGNHAP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MATKHAU" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VOHIEUHOA" Type="Boolean" Nullable="false" />
+          <Property Name="LAQUANLY" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="DON_DAT_HANG" Relationship="Self.FK__DON_DAT_HA__MANV__49C3F6B7" FromRole="NHAN_VIEN" ToRole="DON_DAT_HANG" />
+          <NavigationProperty Name="HOA_DON" Relationship="Self.FK__HOA_DON__MANHANV__4222D4EF" FromRole="NHAN_VIEN" ToRole="HOA_DON" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK__DON_DAT_H__MANCC__48CFD27E">
+          <End Role="NHA_CUNG_CAP" Type="Self.NHA_CUNG_CAP" Multiplicity="1" />
+          <End Role="DON_DAT_HANG" Type="Self.DON_DAT_HANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHA_CUNG_CAP">
+              <PropertyRef Name="MANCC" />
+            </Principal>
+            <Dependent Role="DON_DAT_HANG">
+              <PropertyRef Name="MANCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DON_DAT_HA__MANV__49C3F6B7">
+          <End Role="NHAN_VIEN" Type="Self.NHAN_VIEN" Multiplicity="1" />
+          <End Role="DON_DAT_HANG" Type="Self.DON_DAT_HANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHAN_VIEN">
+              <PropertyRef Name="MANHANVIEN" />
+            </Principal>
+            <Dependent Role="DON_DAT_HANG">
+              <PropertyRef Name="MANV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DONDATHAN__MADDH__4CA06362">
+          <End Role="DON_DAT_HANG" Type="Self.DON_DAT_HANG" Multiplicity="1" />
+          <End Role="DONDATHANG_MATHANG" Type="Self.DONDATHANG_MATHANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DON_DAT_HANG">
+              <PropertyRef Name="MADDH" />
+            </Principal>
+            <Dependent Role="DONDATHANG_MATHANG">
+              <PropertyRef Name="MADDH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DONDATHANG__MAMH__4D94879B">
+          <End Role="MAT_HANG" Type="Self.MAT_HANG" Multiplicity="1" />
+          <End Role="DONDATHANG_MATHANG" Type="Self.DONDATHANG_MATHANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_HANG">
+              <PropertyRef Name="MAMH" />
+            </Principal>
+            <Dependent Role="DONDATHANG_MATHANG">
+              <PropertyRef Name="MAMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HOA_DON__MANHANV__4222D4EF">
+          <End Role="NHAN_VIEN" Type="Self.NHAN_VIEN" Multiplicity="1" />
+          <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHAN_VIEN">
+              <PropertyRef Name="MANHANVIEN" />
+            </Principal>
+            <Dependent Role="HOA_DON">
+              <PropertyRef Name="MANHANVIEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HOADON_MAT__MAHD__44FF419A">
+          <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="1" />
+          <End Role="HOADON_MATHANG" Type="Self.HOADON_MATHANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HOA_DON">
+              <PropertyRef Name="MAHOADON" />
+            </Principal>
+            <Dependent Role="HOADON_MATHANG">
+              <PropertyRef Name="MAHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HOADON_MAT__MAMH__45F365D3">
+          <End Role="MAT_HANG" Type="Self.MAT_HANG" Multiplicity="1" />
+          <End Role="HOADON_MATHANG" Type="Self.HOADON_MATHANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_HANG">
+              <PropertyRef Name="MAMH" />
+            </Principal>
+            <Dependent Role="HOADON_MATHANG">
+              <PropertyRef Name="MAMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MAT_HANG__MALOAI__3F466844">
+          <End Role="LOAI_MAT_HANG" Type="Self.LOAI_MAT_HANG" Multiplicity="1" />
+          <End Role="MAT_HANG" Type="Self.MAT_HANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOAI_MAT_HANG">
+              <PropertyRef Name="MALOAI" />
+            </Principal>
+            <Dependent Role="MAT_HANG">
+              <PropertyRef Name="MALOAI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuanLyUserEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DON_DAT_HANG" EntityType="Self.DON_DAT_HANG" />
+          <EntitySet Name="DONDATHANG_MATHANG" EntityType="Self.DONDATHANG_MATHANG" />
+          <EntitySet Name="HOA_DON" EntityType="Self.HOA_DON" />
+          <EntitySet Name="HOADON_MATHANG" EntityType="Self.HOADON_MATHANG" />
+          <EntitySet Name="LOAI_MAT_HANG" EntityType="Self.LOAI_MAT_HANG" />
+          <EntitySet Name="MAT_HANG" EntityType="Self.MAT_HANG" />
+          <EntitySet Name="NHA_CUNG_CAP" EntityType="Self.NHA_CUNG_CAP" />
+          <EntitySet Name="NHAN_VIEN" EntityType="Self.NHAN_VIEN" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK__DON_DAT_H__MANCC__48CFD27E" Association="Self.FK__DON_DAT_H__MANCC__48CFD27E">
+            <End Role="NHA_CUNG_CAP" EntitySet="NHA_CUNG_CAP" />
+            <End Role="DON_DAT_HANG" EntitySet="DON_DAT_HANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DON_DAT_HA__MANV__49C3F6B7" Association="Self.FK__DON_DAT_HA__MANV__49C3F6B7">
+            <End Role="NHAN_VIEN" EntitySet="NHAN_VIEN" />
+            <End Role="DON_DAT_HANG" EntitySet="DON_DAT_HANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DONDATHAN__MADDH__4CA06362" Association="Self.FK__DONDATHAN__MADDH__4CA06362">
+            <End Role="DON_DAT_HANG" EntitySet="DON_DAT_HANG" />
+            <End Role="DONDATHANG_MATHANG" EntitySet="DONDATHANG_MATHANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DONDATHANG__MAMH__4D94879B" Association="Self.FK__DONDATHANG__MAMH__4D94879B">
+            <End Role="MAT_HANG" EntitySet="MAT_HANG" />
+            <End Role="DONDATHANG_MATHANG" EntitySet="DONDATHANG_MATHANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HOA_DON__MANHANV__4222D4EF" Association="Self.FK__HOA_DON__MANHANV__4222D4EF">
+            <End Role="NHAN_VIEN" EntitySet="NHAN_VIEN" />
+            <End Role="HOA_DON" EntitySet="HOA_DON" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HOADON_MAT__MAHD__44FF419A" Association="Self.FK__HOADON_MAT__MAHD__44FF419A">
+            <End Role="HOA_DON" EntitySet="HOA_DON" />
+            <End Role="HOADON_MATHANG" EntitySet="HOADON_MATHANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HOADON_MAT__MAMH__45F365D3" Association="Self.FK__HOADON_MAT__MAMH__45F365D3">
+            <End Role="MAT_HANG" EntitySet="MAT_HANG" />
+            <End Role="HOADON_MATHANG" EntitySet="HOADON_MATHANG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MAT_HANG__MALOAI__3F466844" Association="Self.FK__MAT_HANG__MALOAI__3F466844">
+            <End Role="LOAI_MAT_HANG" EntitySet="LOAI_MAT_HANG" />
+            <End Role="MAT_HANG" EntitySet="MAT_HANG" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuanLyUserModelStoreContainer" CdmEntityContainer="QuanLyUserEntities1">
+          <EntitySetMapping Name="DON_DAT_HANG">
+            <EntityTypeMapping TypeName="QuanLyUserModel.DON_DAT_HANG">
+              <MappingFragment StoreEntitySet="DON_DAT_HANG">
+                <ScalarProperty Name="MADDH" ColumnName="MADDH" />
+                <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+                <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
+                <ScalarProperty Name="MANV" ColumnName="MANV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DONDATHANG_MATHANG">
+            <EntityTypeMapping TypeName="QuanLyUserModel.DONDATHANG_MATHANG">
+              <MappingFragment StoreEntitySet="DONDATHANG_MATHANG">
+                <ScalarProperty Name="MADDH" ColumnName="MADDH" />
+                <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+                <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOA_DON">
+            <EntityTypeMapping TypeName="QuanLyUserModel.HOA_DON">
+              <MappingFragment StoreEntitySet="HOA_DON">
+                <ScalarProperty Name="MAHOADON" ColumnName="MAHOADON" />
+                <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+                <ScalarProperty Name="MANHANVIEN" ColumnName="MANHANVIEN" />
+                <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOADON_MATHANG">
+            <EntityTypeMapping TypeName="QuanLyUserModel.HOADON_MATHANG">
+              <MappingFragment StoreEntitySet="HOADON_MATHANG">
+                <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+                <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+                <ScalarProperty Name="SOLUONGMUA" ColumnName="SOLUONGMUA" />
+                <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOAI_MAT_HANG">
+            <EntityTypeMapping TypeName="QuanLyUserModel.LOAI_MAT_HANG">
+              <MappingFragment StoreEntitySet="LOAI_MAT_HANG">
+                <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+                <ScalarProperty Name="TENLOAI" ColumnName="TENLOAI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MAT_HANG">
+            <EntityTypeMapping TypeName="QuanLyUserModel.MAT_HANG">
+              <MappingFragment StoreEntitySet="MAT_HANG">
+                <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+                <ScalarProperty Name="TENMH" ColumnName="TENMH" />
+                <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
+                <ScalarProperty Name="DVT" ColumnName="DVT" />
+                <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="VOHIEUHOA" ColumnName="VOHIEUHOA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NHA_CUNG_CAP">
+            <EntityTypeMapping TypeName="QuanLyUserModel.NHA_CUNG_CAP">
+              <MappingFragment StoreEntitySet="NHA_CUNG_CAP">
+                <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+                <ScalarProperty Name="TENNCC" ColumnName="TENNCC" />
+                <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="VOHIEUHOA" ColumnName="VOHIEUHOA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NHAN_VIEN">
+            <EntityTypeMapping TypeName="QuanLyUserModel.NHAN_VIEN">
+              <MappingFragment StoreEntitySet="NHAN_VIEN">
+                <ScalarProperty Name="MANHANVIEN" ColumnName="MANHANVIEN" />
+                <ScalarProperty Name="TENNHANVIEN" ColumnName="TENNHANVIEN" />
+                <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+                <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+                <ScalarProperty Name="CMND_CCCD" ColumnName="CMND_CCCD" />
+                <ScalarProperty Name="TENDANGNHAP" ColumnName="TENDANGNHAP" />
+                <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+                <ScalarProperty Name="VOHIEUHOA" ColumnName="VOHIEUHOA" />
+                <ScalarProperty Name="LAQUANLY" ColumnName="LAQUANLY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QuanLyUserModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,32 @@
+﻿<h2>Phòng hỗ trợ - Mã: @ViewBag.RoomCode</h2>
+<div id="chatBox" style="border:1px solid #ccc;height:300px;overflow:auto"></div>
+<input type="text" id="msgInput" />
+<button onclick="sendMsg()">Gửi</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.0/signalr.min.js"></script>
+<script>
+    const room = "@ViewBag.RoomCode";
+    const userId = "@User.FindFirst("sub")?.Value";
+
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/chatHub")
+        .build();
+
+        connection.on("ReceiveMessage", function (userId, message) {
+        const msg = `${userId}: ${message}`;
+        const li = document.createElement("li");
+        li.textContent = msg;
+        document.getElementById("chat-box").appendChild(li);
+    });
+
+    connection.start().then(() => {
+        connection.invoke("JoinRoom", room);
+    });
+
+    function sendMsg() {
+        const msg = document.getElementById("msgInput").value;
+        if (!msg.trim()) return;
+        connection.invoke("SendMessageToRoom", room, userId, msg);
+        document.getElementById("msgInput").value = "";
+    }
+</script>

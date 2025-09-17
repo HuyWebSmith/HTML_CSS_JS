@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Phòng hỗ trợ";
+    string roomName = ViewBag.RoomName as string;
+}
+
+<h2>Phòng hỗ trợ</h2>
+<p><strong>Mã phòng:</strong> @roomName</p>
+
+<div id="chat-box" style="border: 1px solid #ccc; height: 300px; overflow-y: scroll; padding: 10px;"></div>
+
+<div class="mt-3">
+    <input type="text" id="message-input" placeholder="Nhập tin nhắn..." class="form-control" />
+    <button class="btn btn-primary mt-2" onclick="sendMessage()">Gửi</button>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+<script>
+    const roomName = '@roomName';
+    const userId = '@User.FindFirst("sub")?.Value' || 'Ẩn danh'; // hoặc "Unknown" nếu chưa đăng nhập
+
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/chatHub")
+        .build();
+
+    connection.start().then(function () {
+        connection.invoke("JoinRoom", roomName);
+    });
+
+        connection.on("ReceiveMessage", function (userId, message) {
+        const msg = `${userId}: ${message}`;
+        const li = document.createElement("li");
+        li.textContent = msg;
+        document.getElementById("chat-box").appendChild(li);
+    });
+
+    function sendMessage() {
+        const msg = document.getElementById("message-input").value;
+        if (msg.trim() === "") return;
+
+        connection.invoke("SendMessageToRoom", roomName, msg, userId) // <-- truyền đúng số lượng tham số
+            .catch(function (err) {
+                console.error("SendMessage error:", err.toString());
+            });
+
+        document.getElementById("message-input").value = "";
+    }
+</script>
+
