@@ -33,18 +33,25 @@
 // list_li[2].innerHTML = " ddax thay doi"
 
 //Date
-function UpdateClock() {
-    const now = new Date();
+// ⁡⁣⁣⁢function UpdateClock() {
+//     const now = new Date();
     // const hours = (now.getHours() < 10 ? "0" : "") + now.getHours();
     // const minutes =(now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
     // const seconds =(now.getSeconds() < 10 ? "0" : "") + now.getSeconds();
 
-    const hours = String(now.getHours()).padStart(2,"0");
-    const minutes = String(now.getMinutes()).padStart(2,"0");
-    const seconds = String(now.getSeconds()).padStart(2,"0");
+//     const hours = String(now.getHours()).padStart(2,"0");
+//     const minutes = String(now.getMinutes()).padStart(2,"0");
+//     const seconds = String(now.getSeconds()).padStart(2,"0");
 
-    const timeString = `${hours}:${minutes}:${seconds}`;
-    console.log(timeString);
-    document.getElementById("clock").innerHTML = timeString;
-}
-setInterval(UpdateClock(),1000);
+//     const timeString = `${hours}:${minutes}:${seconds}`;
+//     console.log(timeString);
+//     document.getElementById("clock").innerHTML = timeString;
+// }
+// setInterval(UpdateClock(),1000);⁡
+
+// getAttribute() , setAttribute()
+const firstLink = document.querySelector("a");
+
+const linkHref = firstLink.getAttribute("href");
+console.log(linkHref);
+
