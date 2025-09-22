@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cal_container">
+        <!-- Text input -->
+    <input type="text" id="numA"> <br><br>
+    <input type="text" id="numB"> <br><br>
+    <input type="text" id="result" disabled="disabled"><br><br>
+
+    <!-- Button -->    
+        <div>
+            <input type="button" id="add" value="+"
+            onclick="setResult(add(getValueA(),getValueB()));">
+            <input type="button" id="sub" value="-"
+            onclick="setResult(sub(getValueA(),getValueB()));">
+            <input type="button" id="mul" value="x"
+            onclick="setResult(mul(getValueA(),getValueB()));">
+            <input type="button" id="div" value=":"
+            onclick="setResult(div(getValueA(),getValueB()));">
+            <input type="button" id="mod" value="%"
+            onclick="setResult(mod(getValueA(),getValueB()));">
+        </div>
+    </div>
+ 
+    <script src="main.js"></script>
+</body>
+</html>
