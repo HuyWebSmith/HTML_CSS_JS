@@ -55,3 +55,5 @@ const firstLink = document.querySelector("a");
 const linkHref = firstLink.getAttribute("href");
 console.log(linkHref);
 
+firstLink.setAttribute("target","_blank");
+

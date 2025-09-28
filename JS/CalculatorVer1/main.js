@@ -22,3 +22,7 @@ function div(numA,numB) {
 function mod(numA,numB) {
     return parseFloat(numA) % parseFloat(numB);
 }
+
+function setNumber(number,numAssign) {
+    return document.getElementById(numAssign).value = number
+}
