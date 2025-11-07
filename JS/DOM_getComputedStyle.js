@@ -14,3 +14,5 @@ window.getComputedStyle(h1.backgroundColor);
 console.log(h1.style.backgroundColor);
 
 
+
+
